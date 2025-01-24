@@ -1,0 +1,95 @@
+{
+  "name": "react-package-starter",
+  "version": "1.0.0",
+  "description": "A starter template for creating React packages.",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage",
+    "lint": "eslint --ignore-path .gitignore \"{src,tests}/**/*.+(ts|js|tsx|jsx)\"",
+    "lint:fix": "pnpm lint --fix && prettier --write .",
+    "commit": "cz",
+    "dev": "tsup --watch",
+    "build": "tsup --onSuccess",
+    "link:self": "pnpm link",
+    "link:remove": "pnpm unlink"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
+    }
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "keywords": [
+    "react",
+    "react-package",
+    "npm-package",
+    "typescript",
+    "react-ts",
+    "react-typescript"
+  ],
+  "author": {
+    "email": "duongductrong06@gmail.com",
+    "name": "Duong Duc Trong",
+    "url": "https://github.com/duongductrong"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tsup": "^8.3.5"
+  },
+  "devDependencies": {
+    "@ryansonshine/commitizen": "4.2.8",
+    "@ryansonshine/cz-conventional-changelog": "3.3.4",
+    "eslint": "^9.18.0",
+    "prettier": "3.3.3",
+    "release-it": "17.6.0",
+    "tsx": "4.19.0",
+    "tsconfig-paths": "4.2.0",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.13.0",
+    "@typescript-eslint/parser": "7.13.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.9.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-react": "7.35.0",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-sort-class-members": "1.20.0",
+    "eslint-plugin-storybook": "0.8.0",
+    "eslint-plugin-typescript-sort-keys": "3.2.0",
+    "eslint-plugin-unused-imports": "3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duongductrong/react-package-starter.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
