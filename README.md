@@ -75,3 +75,5 @@ pnpm publish
 ## 🤖 Dependabot
 
 Dependabot is a tool that automates dependency updates. It checks for updates to your dependencies and opens pull requests to update them. Dependabot is enabled by default in this project. You can configure it by editing the `.github/dependabot.yml` file.
+
+Read more about Dependabot [here](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference).
