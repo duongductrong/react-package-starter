@@ -11,9 +11,10 @@
     "lint:fix": "pnpm lint --fix && prettier --write .",
     "commit": "cz",
     "dev": "tsup --watch",
-    "build": "tsup --onSuccess",
+    "build": "tsup",
     "link:self": "pnpm link",
-    "link:remove": "pnpm unlink"
+    "link:remove": "pnpm unlink",
+    "release": "pnpm build && pnpm release-it"
   },
   "types": "./dist/index.d.ts",
   "exports": {
@@ -57,20 +58,17 @@
   },
   "license": "MIT",
   "dependencies": {
+    "release-it": "^18.1.1",
     "tsup": "^8.3.5"
   },
   "devDependencies": {
     "@ryansonshine/commitizen": "4.2.8",
     "@ryansonshine/cz-conventional-changelog": "3.3.4",
-    "eslint": "^9.18.0",
-    "prettier": "3.3.3",
-    "release-it": "17.6.0",
-    "tsx": "4.19.0",
-    "tsconfig-paths": "4.2.0",
     "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/eslint-plugin": "7.13.0",
     "@typescript-eslint/parser": "7.13.0",
+    "eslint": "^9.18.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "9.1.0",
@@ -83,7 +81,10 @@
     "eslint-plugin-sort-class-members": "1.20.0",
     "eslint-plugin-storybook": "0.8.0",
     "eslint-plugin-typescript-sort-keys": "3.2.0",
-    "eslint-plugin-unused-imports": "3.2.0"
+    "eslint-plugin-unused-imports": "3.2.0",
+    "prettier": "3.3.3",
+    "tsconfig-paths": "4.2.0",
+    "tsx": "4.19.0"
   },
   "repository": {
     "type": "git",
