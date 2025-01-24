@@ -1,5 +1,5 @@
-export type * from "./example"
+export type * from "./counter"
 
-import Example from "./example"
+import Counter from "./counter"
 
-export { Example }
+export { Counter }
