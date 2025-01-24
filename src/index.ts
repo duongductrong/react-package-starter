@@ -1,5 +1,5 @@
-export type * from "./counter"
-
 import Counter from "./counter"
+
+export type * from "./counter"
 
 export { Counter }

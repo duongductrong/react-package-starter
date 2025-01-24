@@ -7,7 +7,9 @@ const Example = (props: ExampleProps) => {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount((prev) => prev + 1)}>Increase +</button>
+      <button type="button" onClick={() => setCount((prev) => prev + 1)}>
+        Increase +
+      </button>
     </div>
   )
 }
