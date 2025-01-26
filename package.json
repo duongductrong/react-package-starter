@@ -63,11 +63,11 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "release-it": "^18.1.2",
-    "tsup": "^8.3.5"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "release-it": "^18.1.2",
+    "tsup": "^8.3.5",
     "@ryansonshine/commitizen": "4.2.8",
     "@ryansonshine/cz-conventional-changelog": "3.3.4",
     "@testing-library/jest-dom": "^6.6.3",
